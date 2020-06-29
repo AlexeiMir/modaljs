@@ -83,7 +83,7 @@ let closing = false
             destroyed = true
         },
         setContent(html){
-            document.querySelector('[data-content]').innerHTML = html
+            $modal.querySelector('[data-content]').innerHTML = html
         }
     })
 }
