@@ -5,12 +5,15 @@ return new Promise( (resolve,reject) => {
         width: "400px",
         closable:false,
         content:options.content,
+        onClose(){
+            modal.destroy()
+        },
         footerButtons : [
             {text:"Cancel",type:'secondary',handler(){
                 modal.close()
                 reject()
                 }},
-                {text:"Close",type:'danger',handler(){
+                {text:"Delete",type:'danger',handler(){
                     modal.close()
                     resolve()
                 }}

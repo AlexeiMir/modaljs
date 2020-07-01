@@ -64,6 +64,9 @@ let closing = false
             closing = true
             setTimeout(() => {
                 $modal.classList.remove("hide")
+                if (typeof options.onClose === 'function'){
+                    options.onClose()
+                }
                 closing = false
             },ANIMATION_SPEED)
         }
